@@ -41,3 +41,5 @@ adabound>=0.0.5
 compress_pickle>=2.1.0
 ffmpeg-python
 pip-tools
+scikit-video
+setuptools<70.0.0

@@ -2,6 +2,8 @@ from gdl_apps.EMOCA.utils.load import load_model
 from gdl.utils.FaceDetector import FAN
 from gdl.datasets.FaceVideoDataModule import TestFaceVideoDM
 import gdl
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import gdl.utils.DecaUtils as util
 import numpy as np
