@@ -15,7 +15,7 @@ torchvision>=0.15.0
 torchaudio>=2.0.0
 
 # Lightning & Models
-pytorch-lightning>=1.7.0
+pytorch-lightning>=2.0.0
 torchmetrics<0.8.0
 timm>=0.6.0
 omegaconf>=2.2.0
