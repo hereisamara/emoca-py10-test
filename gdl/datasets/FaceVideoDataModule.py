@@ -1557,8 +1557,8 @@ class FaceVideoDataModule(FaceDataModuleBase):
                 aud_meta = {}
                 aud_meta['sample_rate'] = aud_info['sample_rate']
                 aud_meta['sample_fmt'] = aud_info['sample_fmt']
-                # aud_meta['num_samples'] = int(aud_info['nb_samples'])
-                aud_meta["num_frames"] = int(aud_info['nb_frames'])
+                # Some containers/codecs do not expose audio nb_frames via ffprobe.
+                aud_meta["num_frames"] = int(aud_info.get('nb_frames', 0) or 0)
                 assert float(aud_info['start_time']) == 0
                 self.audio_metas += [aud_meta]
         
